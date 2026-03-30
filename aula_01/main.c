@@ -1,15 +1,30 @@
 #include <stdio.h>
 
 int main(){
-    float num1;
-    float num2;
+    float n1, n2, n3, nota_final;
     
-    printf("Qual o primeiro número?");
-    scanf("%f", &num1);
+    printf("Me diga a primeira nota");
+    scanf("%f", &n1);
     
-    printf("Qual o segundo número?");
-    scanf("%f", &num2);
+    printf("Me diga a segunda nota");
+    scanf("%f", &n2);
     
-    printf("O número deu %f", num1 + num2);
+    printf("Me diga a terceira nota");
+    scanf("%f", &n3);
     
+    nota_final = (n1 + n2 + n3) / 3;
+
+    if (nota_final >= 7){
+        printf("APROVADO!");
+        
+    }    
+    
+    else if (5 < nota_final < 7){
+        printf("RECUPERAÇÃO");
+    }
+    
+    else{
+        printf("REPROVADO");
+        
+    }
 }
