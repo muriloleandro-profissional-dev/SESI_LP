@@ -1,8 +1,7 @@
 #include <stdio.h>
 
 int main(){
-    float num1;
-    float num2;
+    float num1, num2, soma;
     
     printf("Qual o primeiro número?");
     scanf("%f", &num1);
@@ -10,6 +9,8 @@ int main(){
     printf("Qual o segundo número?");
     scanf("%f", &num2);
     
-    printf("O número deu %f", num1 + num2);
+    soma = n1 + n2;
+    
+    printf("%.2f + %.2f = %.2f", num1, num2, soma);
     
 }
