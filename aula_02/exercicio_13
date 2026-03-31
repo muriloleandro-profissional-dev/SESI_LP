@@ -1,0 +1,41 @@
+#include <stdio.h>
+
+int main(){
+    
+    float n1, n2, conta;
+    char operador;
+    
+    printf("Me diga o primeiro número: ");
+    scanf("%f", &n1);
+    
+    printf("Me diga o segundo número: ");
+    scanf("%f", &n2);
+    
+    getchar(); // Limpa o Enter do buffer
+    
+    printf("Me diga operação que ocorrerá. Ex: + - * /: ");
+    scanf("%c", &operador);
+    
+    if(operador == '+'){
+        conta = n1 + n2;
+        printf("O resultado deu %.2f\n", conta);
+    }
+    if(operador == '-'){
+        conta = n1 - n2;
+        printf("O resultado deu %.2f\n", conta);
+    }
+    if(operador == '/'){
+        if(n2 != 0){
+            conta = n1 / n2;
+            printf("O resultado deu %.2f\n", conta);
+        } else {
+            printf("Erro: divisao por zero\n");
+        }
+    }
+    if(operador == '*'){
+        conta = n1 * n2;
+        printf("O resultado deu %.2f\n", conta);
+    }
+    
+    return 0;
+}

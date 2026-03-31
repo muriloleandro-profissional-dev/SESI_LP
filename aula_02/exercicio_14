@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main(){
+    float nota;
+    
+    printf("Me diga qual é a nota");
+    scanf("%f", &nota);
+    
+    if(nota >=9){
+        printf("Nota de nível A");
+    }
+    
+    else if(8.9 >= nota){
+        printf("Nota de nível B");
+    }
+    else if(6.9 >= nota){
+        printf("Nota nível C");
+    }
+    
+    else if(5 >= nota){
+        printf("Nota de nível D");
+    }
+}

@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+
+
+int main() {
+
+	int idade, idade_real;
+
+	printf("Qual sua data de nascimento?");
+	scanf("%i", &idade);
+
+	idade_real = 2026 - idade;
+
+	if (0<idade_real<=12); {
+		printf("Você tem %i, você é uma criança", idade_real);
+
+	}
+
+	if (12< idade_real && idade_real <= 17) {
+		printf("Você tem %i, você é um adolescente", idade_real);
+
+	}
+
+	else if(17 < idade_real && idade_real <= 59) {
+		printf("Você tem %i, você é um adulto", idade_real);
+
+	}
+
+	else if (60<=idade_real) {
+		printf("Você tem %i, você é um idoso", idade_real);
+
+	}
+}

@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main(){
+    float salario, bonus, salario_final;
+    
+    printf("Me diga o seu salário");
+    scanf("%f", &salario);
+    
+    if(salario > 3000){
+        salario_final = salario+(salario*0.05);
+        printf("%f", salario_final);
+    }
+    
+    else{
+        salario_final = salario+(salario*0.1);
+        printf("%f", salario_final);
+    }
+}

@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+
+int main(){
+    char usuario, senha, admin [30];
+    int 1234;
+    
+    usuario = [admin];
+    senha = [1234];
+    
+    printf("Digite o usuário");
+    scanf("%c", usuario);
+    
+    if(usuario = admin){
+        printf("Me diga a senha");
+        scanf("%i", senha);
+        
+        if(senha = 1234){
+            printf("Login sucedido");
+            
+        }
+        else{
+            printf("Senha incorreta!");
+        }
+    }
+    
+    else{
+        printf("Usuário incorreto!");
+    }
+    
+}

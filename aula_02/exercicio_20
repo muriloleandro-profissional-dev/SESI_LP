@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main(){
+    
+    float velocidade;
+    
+    printf("Qual a velocidade?");
+    scanf("%f", &velocidade);
+    
+    if(velocidade <= 60){
+        printf("Não tem multa nessa velocidade");
+    }
+    else if( 60 < velocidade && velocidade <= 80){
+        printf("Você recebeu multa leve");
+    }
+    else if(80 < velocidade && velocidade <= 100){
+        printf("Você recebeu multa grave");
+    }
+    else if(velocidade > 100){
+        printf("Você recebeu multa gravíssima");
+    }
+}

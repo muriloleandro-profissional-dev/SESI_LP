@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main(){
+    
+    int num1, equacao1;
+    
+    printf("Me fale o primeiro número");
+    scanf("%i", &num1);
+    
+    equacao1 == num1 % 2;
+    
+    if(equacao1 == 0){
+        printf("É um número impar");
+        
+    }
+    
+    else{
+        printf("É um número impar");
+    }
+}

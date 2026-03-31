@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main(){
+    
+    int ano, ano_eleicao;
+    
+    printf("Me diga o ano e eu falarei se é de eleição.");
+    scanf("%i", &ano);
+    
+    ano_eleicao = ano % 4;
+    
+    if(ano_eleicao == 0){
+        printf("É ano de eleição");
+    }
+    
+    else{
+        printf("Não é ano de eleição");
+    }
+    
+}

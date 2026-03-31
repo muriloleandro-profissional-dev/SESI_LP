@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int main(){
+    
+    float num1, num2, num3;
+    
+    printf("Me diga o primeiro número");
+    scanf("%f", &num1);
+    
+    printf("Me diga o segundo número");
+    scanf("%f", &num2);
+    
+    printf("Me diga o terceiro número");
+    scanf("%f", &num3);
+    
+    if (num1 + num2 < num3, num2 + num3 < num1, num3 + num1 < num2){
+        printf("Esse não pode ser um triângulo");
+        
+    }
+    else if(num1 = num2 = num3){
+        printf("Esse é um triângulo equilátero");
+    }
+    else if(num1=num2, num1=num3, num2=num3){
+        printf("Esse é um triângulo isósceles");
+        
+    }
+    
+    else if(num1!=num2!=num3){
+        printf("Esse é um triângulo escaleno");
+        
+    }
+}

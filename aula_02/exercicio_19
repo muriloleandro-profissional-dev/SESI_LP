@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main(){
+    float peso;
+    
+    printf("Me diga o peso da encomenda em KG");
+    scanf("%f", &peso);
+    
+    if(peso<=5){
+        printf("Deu 10 reais");
+    }
+    else if(5 < peso && peso <= 20){
+        printf("Deu 20 reais");
+    }
+    else{
+        printf("Deu 50 reais");
+    }
+}

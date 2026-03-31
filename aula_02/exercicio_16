@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main(){
+    
+    float consumo, conta_final;
+    
+    printf("Me diga qual seu consumo de KWh");
+    scanf("%f", &consumo);
+    
+    if(consumo <=100){
+        conta_final = consumo*0.50;
+        
+        printf("O valor é: %f", conta_final);
+    }
+    
+    else if(101<=consumo<=200){
+        conta_final = consumo*0.75;
+        printf("O valor é: %f", conta_final);
+    }
+    
+    else if(consumo>200){
+        conta_final = consumo*1;
+        printf("O valor é: %f", conta_final);
+    }
+    
+}

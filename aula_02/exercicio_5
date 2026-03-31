@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main(){
+    
+    float valor, conta;
+    
+    printf("Quanto que deu o valor da compra?");
+    scanf("%f", &valor);
+    
+    if(valor >= 100){
+        conta = valor * 0.90;
+        printf("O valor com desconto deu: %f", conta);
+        
+    }
+    
+    else{
+        conta = valor * 0.95;
+        printf("O valor com desconto deu: %f", conta);
+    }
+}

@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main(){
+    
+    int ano;
+    
+    printf("Quantos dias o ano agora tem?");
+    scanf("%i", &ano);
+    
+    if(ano > 365){
+        printf("O ano é bissexto");
+    }
+    
+    else{
+        printf("O ano não é bissexto");
+    }
+}
