@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main(){
+    
+    int i = 0, conta;
+
+    for(i=0; i < 1; i = i+1){
+        
+        conta = 50 / 2;
+        
+        printf("Do número 0 até o 50 tem %i números pares\n", conta);
+        
+    }
+    
+}

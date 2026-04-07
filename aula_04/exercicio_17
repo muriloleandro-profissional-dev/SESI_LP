@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main() {
+    int numero, contador = 0;
+
+    do {
+        printf("Digite um número (negativo para parar): ");
+        scanf("%i", &numero);
+
+        if(numero >= 0) {
+            contador++;
+        }
+
+    } while(numero >= 0);
+
+    printf("Você digitou %i números não negativos.\n", contador);
+
+    return 0;
+}

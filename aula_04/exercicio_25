@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main() {
+    int valor;
+    int notas100, notas50, notas20, notas10, notas5, notas1;
+
+    scanf("%i", &valor);
+
+    for(notas100 = valor / 100, valor = valor % 100; ; notas100 = notas100) break;
+    for(notas50 = valor / 50, valor = valor % 50; ; notas50 = notas50) break;
+    for(notas20 = valor / 20, valor = valor % 20; ; notas20 = notas20) break;
+    for(notas10 = valor / 10, valor = valor % 10; ; notas10 = notas10) break;
+    for(notas5 = valor / 5, valor = valor % 5; ; notas5 = notas5) break;
+    for(notas1 = valor; ; notas1 = notas1) break;
+
+    printf("%i %i %i %i %i %i\n", notas100, notas50, notas20, notas10, notas5, notas1);
+
+    return 0;
+}

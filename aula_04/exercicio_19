@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main() {
+    int numero, maior = -2147483648;
+
+    do {
+        scanf("%i", &numero);
+
+        if(numero != 999 && numero > maior) {
+            maior = numero;
+        }
+
+    } while(numero != 999);
+
+    printf("%i\n", maior);
+
+    return 0;
+}

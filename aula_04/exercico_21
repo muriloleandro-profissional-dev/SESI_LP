@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main() {
+    int opcao;
+
+    do {
+        scanf("%i", &opcao);
+
+        if(opcao == 1) {
+            printf("Olá\n");
+        } else if(opcao == 2) {
+            printf("Tudo bem?\n");
+        }
+
+    } while(opcao != 3);
+
+    return 0;
+}

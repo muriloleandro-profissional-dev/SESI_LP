@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main(){
+    
+    int i = 0, numero_1 = 0, numero_2 = 0;
+    
+    printf("Me diga dois números e eu falarei dele até o outro número. Tem que ser número inteiro\n");
+    
+    printf("Me diga o primeiro número\n");
+    scanf("%i", &numero_1);
+    
+    printf("Me diga o segundo número\n");
+    scanf("%i", &numero_2);
+    
+    if(numero_1 < numero_2){
+    for(i = numero_1; i <= numero_2; i++){
+        printf("%i\n", i);
+    }
+}
+else{
+    for(i = numero_1; i >= numero_2; i--){
+        printf("%i\n", i);
+    }
+}
+
+
+    
+}

@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main(){
+    
+    int numero, conta, i;
+    
+    printf("Me diga um número inteiro, e eu irei falar todos os números até ele do 1 ");
+    scanf("%i", &numero);
+    
+    for(i = 0; i < numero; i = i + 1){
+        printf("%i\n", i + 1);
+        
+    }
+    
+}

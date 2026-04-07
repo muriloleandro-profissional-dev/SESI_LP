@@ -2,9 +2,11 @@
 
 int main(){
     
-    int i = 0;
-    for(i = 0; i < 11; i = i+1){
+     int i = 0;
+    while(i < 11){
         printf("%i\n", i);
-    }
+        i++;
+    } 
+
     
 }
