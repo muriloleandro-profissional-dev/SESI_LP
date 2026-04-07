@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main(){
+    
+    int numero, i, soma;
+    
+    
+    printf("Me diga um número inteiro de 1-10 e eu falarei a tabuada dele");
+    scanf("%i", &numero);
+    
+    printf("A tabuada do %i é: ", numero);
+    
+    
+    for(i=0; i < 10; i++){
+        
+        soma = 
+        
+    }
+    
+}
