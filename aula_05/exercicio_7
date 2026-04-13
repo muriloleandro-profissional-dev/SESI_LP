@@ -1,0 +1,39 @@
+#include <stdio.h>
+
+int main() {
+    float saques[10];
+    float totalSacado = 0;
+    float maiorSaque;
+    int acima500 = 0;
+
+    
+    for(int i = 0; i < 10; i++) {
+        printf("Digite o valor do %d o. saque: R$ ", i + 1);
+        scanf("%f", &saques[i]);
+        
+        totalSacado += saques[i]; 
+    }
+
+    
+    maiorSaque = saques[0]; 
+
+    for(int i = 0; i < 10; i++) {
+
+        if(saques[i] > maiorSaque) {
+            maiorSaque = saques[i];
+        }
+
+        
+        if(saques[i] > 500) {
+            acima500++;
+        }
+    }
+
+    
+    printf("\n--- RELATORIO DO CAIXA ---\n");
+    printf("Total sacado no dia: R$ %.2f\n", totalSacado);
+    printf("Maior saque realizado: R$ %.2f\n", maiorSaque);
+    printf("Quantidade de saques acima de R$ 500: %d\n", acima500);
+
+    return 0;
+}

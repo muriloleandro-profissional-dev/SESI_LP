@@ -1,0 +1,36 @@
+#include <stdio.h>
+
+int main(){
+    
+    int numero[12];
+    int decrescente = 1;
+    int crescente = 1;
+    
+    for(int i=0; i < 12; i++){
+        printf("Qual o %i número inteiro?", i + 1);
+        scanf("%i", &numero[i]);
+        
+    }
+    
+    for(int i=0; i < 11; i++){
+        if(numero[i] > numero[i + 1]){
+            crescente = 0;
+        }
+        if(numero[i] < numero[i + 1]){
+            decrescente = 0;
+        }
+    }
+    
+    if(crescente == 1){
+        printf("A ordem é crescente\n");
+    }
+    
+    else if(decrescente == 1){
+        printf("A ordem é decrescente\n");
+        
+    }
+    
+    else{
+        printf("A ordem é desornada\n");
+    }
+}

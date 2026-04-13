@@ -1,0 +1,61 @@
+#include <stdio.h>
+
+int main(){
+    
+    int idade[15];
+    int jovem=0, adulto=0, idoso=0;
+    
+    
+    for(int i=0; i < 15; i++){
+        
+        printf("Me fale a idade da %i pessoa", i + 1);
+        scanf("%i", &idade[i]);
+        
+        
+    }
+    
+    for(int i=0; i <15; i++){
+        if(idade[i] > 0 && idade[i] <=17){
+            jovem++;
+            
+        }
+        
+    }
+    printf("Jovens de até 17 anos: \n");
+    
+    
+    
+    for(int i=0; i<15; i++){
+        if(idade[i] >= 18 && idade[i] <=59){
+            adulto++;
+            
+        }
+    }
+    printf("Adultos de até 18 anos para 59: \n");
+    
+    
+    for(int i=0; i < 15; i++){
+        if(idade[i] >= 60){
+            idoso++;
+            
+        }
+        
+    }
+    
+    printf("Idosos de até 60 anos ou mais: \n");
+    
+    if(jovem > adulto && jovem > idoso){
+        printf("Os jovens são em maior número, com %i pessoas\n", jovem);
+    }
+    
+    if(adulto > jovem && adulto > idoso){
+        printf("Os adultos são em maior número, com %i pessoas\n", adulto);
+        
+    }
+    
+    if(idoso > jovem && idoso > adulto ){
+        printf("Os idosos são em maior número, com %i pessoas\n", idoso);
+    }
+    
+    
+}

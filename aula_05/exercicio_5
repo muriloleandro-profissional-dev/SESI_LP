@@ -1,0 +1,46 @@
+#include <stdio.h>
+
+int main() {
+    float temp[7];
+    float soma = 0, media = 0;
+    float maior, menor;
+    int acimaMedia = 0;
+
+    
+    for(int i = 0; i < 7; i++) {
+        printf("Digite a temperatura do dia %d: ", i + 1);
+        scanf("%f", &temp[i]);
+        soma += temp[i]; 
+    }
+
+    media = soma / 7;
+
+    
+    maior = temp[0];
+    menor = temp[0];
+
+    for(int i = 1; i < 7; i++) {
+        if(temp[i] > maior) {
+            maior = temp[i];
+        }
+        if(temp[i] < menor) {
+            menor = temp[i];
+        }
+    }
+
+    
+    for(int i = 0; i < 7; i++) {
+        if(temp[i] > media) {
+            acimaMedia++;
+        }
+    }
+
+    
+    printf("\n--- RESULTADOS ---\n");
+    printf("Media das temperaturas: %.2f\n", media);
+    printf("Dia mais quente: %.2f\n", maior);
+    printf("Dia mais frio: %.2f\n", menor);
+    printf("Dias acima da media: %d\n", acimaMedia);
+
+    return 0;
+}

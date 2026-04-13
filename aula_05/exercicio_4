@@ -1,0 +1,42 @@
+#include <stdio.h>
+
+int main() {
+    int numero[10];
+    int dominante = -1; 
+    int encontrou = 0;
+
+    
+    for(int i = 0; i < 10; i++) {
+        printf("Me diga o %i numero inteiro: ", i + 1);
+        scanf("%i", &numero[i]);
+    }
+
+   
+    for(int i = 0; i < 10; i++) {
+        int contador = 0;
+        int candidato = numero[i]; 
+
+        
+        for(int j = 0; j < 10; j++) {
+            if(numero[j] == candidato) {
+                contador++;
+            }
+        }
+
+        
+        if(contador > 5) {
+            dominante = candidato;
+            encontrou = 1;
+            break; 
+        }
+    }
+
+    
+    if(encontrou == 1) {
+        printf("\nO valor dominante eh o %i (ele aparece mais de 5 vezes).\n", dominante);
+    } else {
+        printf("\nNao existe um valor dominante nesta lista.\n");
+    }
+
+    return 0;
+}

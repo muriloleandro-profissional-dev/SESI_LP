@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main(){
+    
+    float salario[3];
+    float soma = 0;
+    
+    
+    
+    
+    for(int i = 0; i < 3; i++){
+        printf("%i Digite seu salário: ", i);
+        
+        scanf("%f", &salario[i]);
+        
+        soma = soma + salario[i];
+        
+    }
+    
+    printf("A soma de todos os salários é %.2f\n", soma);
+    
+}
