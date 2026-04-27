@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+int main(){
+    
+    int numero[6];
+    int maior, segundoMaior; 
+    
+    for(int i=0; i < 6; i++){
+        printf("Me diga o %i número: ", i+1);
+        scanf("%d", &numero[i]);
+    }
+    
+
+    maior = numero[0];
+    
+ 
+    segundoMaior = -999999; 
+
+    for(int i = 0; i < 6; i++){
+        if(numero[i] > maior){
+            segundoMaior = maior; 
+            maior = numero[i];    
+        }
+        else if(numero[i] > segundoMaior && numero[i] < maior){
+            segundoMaior = numero[i];
+        }
+    }
+    
+    printf("\nO maior valor: %d", maior);
+    printf("\nO segundo maior valor: %d\n", segundoMaior);
+
+    return 0;
+}

@@ -1,0 +1,36 @@
+#include <stdio.h> 
+
+int main(){
+    
+    int numero[5];
+    int maior_contagem=0, vencedor=0;
+    
+    for(int i=0; i < 5; i++){
+
+        printf("\nMe diga o número %i:    ", i+1);
+        scanf("%i", &numero[i]);
+    }
+    
+    
+    
+    for(int i=0; i < 5; i++){
+            
+        int contagem_atual = 0;
+            
+        for(int z=0; z < 5; z++){
+            
+            if(numero[i] == numero[z]){
+                contagem_atual++;
+                }
+            }
+            
+        if(contagem_atual > maior_contagem){
+            maior_contagem = contagem_atual;
+            vencedor = numero[i];
+        }
+             
+        }
+        
+    printf("O número que mais se repete é o %i, ele repete %i vezes", vencedor, maior_contagem);
+    
+}

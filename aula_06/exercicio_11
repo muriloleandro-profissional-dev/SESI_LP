@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+int main(){
+    
+    int numero[10];
+    int aux;
+    
+
+    for(int i = 0; i < 10; i++){
+        printf("Me diga o numero %i: ", i+1);
+        scanf("%d", &numero[i]);
+    }
+    
+    
+    for(int i = 0; i < 10; i++){
+        for(int j = 0; j < 9; j++){
+            
+            
+            if(numero[j] < numero[j+1]){
+                aux = numero[j];
+                numero[j] = numero[j+1];
+                numero[j+1] = aux;
+            }
+        }
+    }
+    
+
+    printf("\nVetor em ordem DECRESCENTE:\n");
+    for(int i = 0; i < 10; i++){
+        printf("%d ", numero[i]);
+    }
+    
+    return 0;
+}
