@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main(){
+    
+    int numero[8], soma=0;
+    
+     printf("\nSomarei todos os números que você falar, vão ser 8 números inteiros");
+    
+    for(int i=0; i < 8; i++){
+        
+       printf("\nMe diga o %i número", i+1);
+       scanf("%i", &numero[i]);
+       
+       soma = soma + numero[i];
+       
+        
+    }
+    
+    printf("%i", soma);

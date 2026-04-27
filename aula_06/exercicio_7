@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main(){
+    
+    float numero[10], soma=0;
+    
+    for(int i=0; i < 10; i++){
+        
+        printf("Me fale o %i número: ", i+1);
+        scanf("%f", &numero[i]);
+        
+        soma = soma + numero[i];
+        
+    }
+    
+    printf("%.2f", soma / 10);
+    
+}
