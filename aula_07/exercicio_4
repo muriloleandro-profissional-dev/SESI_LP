@@ -1,0 +1,43 @@
+#include <stdio.h>
+
+int main(){
+    
+    int matriz[4][4];
+    int maior=0;
+    
+    for(int l=0; l < 4; l++){
+        
+        for(int c=0; c < 4; c++){
+            
+            printf("Número da linha %i:  e coluna %i: ", l+1, c+1);
+            scanf("%i", &matriz[l][c]);
+
+            
+        }
+        
+    }
+    
+    for(int l=0; l < 4; l++){
+        
+        
+        
+        for(int c=0; c < 4; c++){
+            
+            printf(" | %i ", matriz[l][c]);
+            
+            if(matriz[l][c] > 10){
+                maior++;
+                
+            }
+            
+        }
+        
+        printf("\n");
+        
+    }
+    
+    printf("  \n");
+    printf("A quantidade de números que são maior que 10 são: %i", maior);
+
+    
+}

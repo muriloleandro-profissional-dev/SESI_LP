@@ -1,0 +1,44 @@
+#include <stdio.h>
+
+int main(){
+    
+    int matrizA[2][2], matrizB[2][2], matrizC[2][2];
+    
+    printf("Dados da Matriz A:\n");
+    for(int l=0; l < 2; l++){
+        for(int c=0; c < 2; c++){
+            printf("Matriz A [%i][%i]: ", l+1, c+1);
+            scanf("%i", &matrizA[l][c]);
+        }
+    }
+
+  
+    printf("\nDados da Matriz B:\n");
+    for(int l=0; l < 2; l++){
+        for(int c=0; c < 2; c++){
+            printf("Matriz B [%i][%i]: ", l+1, c+1);
+            scanf("%i", &matrizB[l][c]);
+        }
+    }
+
+
+    for(int l=0; l < 2; l++){
+        for(int c=0; c < 2; c++){
+            matrizC[l][c] = 0; 
+            for(int k=0; k < 2; k++){
+                matrizC[l][c] += matrizA[l][k] * matrizB[k][c];
+            }
+        }
+    }
+
+
+    printf("\n--- Resultado da Multiplicacao (C) ---\n");
+    for(int l=0; l < 2; l++){
+        for(int c=0; c < 2; c++){
+            printf(" | %i ", matrizC[l][c]);
+        }
+        printf("\n");
+    }
+
+
+}
