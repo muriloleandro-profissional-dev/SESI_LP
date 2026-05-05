@@ -1,0 +1,88 @@
+#include <stdio.h>
+
+float conta_soma(float a, float b){
+    
+    return a + b;
+}
+
+float diminuicao(float a, float b){
+    
+    return a - b;
+}
+
+float multiplicacao(float a, float b){
+    
+    return a * b;
+}
+
+float divisao(float a, float b){
+    
+    return a / b;
+}
+
+void espacamento(){
+    
+    printf("\n");
+    
+}
+
+int main(){
+
+    float n1, n2;
+    float soma=0;
+    char operacao;
+    
+    printf("\nA conta que vai acontecer será o número A pelo B.");
+    
+    espacamento();
+
+    printf("\nDigite primeiro valor: ");
+    scanf("%f", &n1);
+    
+    printf("\nDigite segundo valor: ");
+    scanf("%f", &n2);
+    
+    
+    
+    printf("\nDigite 1 para somar");
+    printf("\nDigite 2 para diminuir");
+    printf("\nDigite 3 para multiplicação");
+    printf("\nDigite 4 para divisão");
+    printf("\nDigite 0 para sair");
+    
+    espacamento();
+    
+    printf("\nMe fale qual tipo de operação você quer.");
+    scanf(" %c", &operacao);
+    
+    espacamento();
+    
+    switch(operacao){
+        case '1':{
+            soma = conta_soma(n1, n2);
+            printf("\nO resultado é: %.2f", soma);
+            break;
+        }
+        case '2':{
+            soma = diminuicao(n1, n2);
+            printf("\nO resultado é: %.2f", soma);
+            break;
+        }
+        case '3':{
+            soma = multiplicacao(n1, n2);
+            printf("\nO resultado é: %.2f", soma);
+            break;
+        }    
+        case '4':{
+            soma = divisao(n1, n2);
+            printf("\nO resultado é: %.2f", soma);
+            break;
+        }
+        case '0':{
+            printf("ENCERRANDO!");
+            break;
+        }
+
+}
+    espacamento();
+}
