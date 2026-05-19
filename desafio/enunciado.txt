@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Guia Técnico e Descritivo: Jogo de Adivinhação Customizável em C
 Este projeto consiste em um jogo eletrônico baseado em terminal desenvolvido integralmente na linguagem C. O objetivo principal da aplicação é desafiar o raciocínio lógico e a intuição do usuário, que precisa descobrir um número secreto armazenado pelo sistema. O programa foi projetado com foco na experiência do usuário e na modularização, dividindo-se em dois modos de jogo completamente independentes que ditam o nível de dificuldade da partida.
 
@@ -45,4 +46,53 @@ O acumulado de erros cometidos em todas as rodadas desde que o programa foi aber
 
 O número total de vitórias conquistadas.
 
+=======
+Guia Técnico e Descritivo: Jogo de Adivinhação Customizável em C
+Este projeto consiste em um jogo eletrônico baseado em terminal desenvolvido integralmente na linguagem C. O objetivo principal da aplicação é desafiar o raciocínio lógico e a intuição do usuário, que precisa descobrir um número secreto armazenado pelo sistema. O programa foi projetado com foco na experiência do usuário e na modularização, dividindo-se em dois modos de jogo completamente independentes que ditam o nível de dificuldade da partida.
+
+Fluxo Inicial e Interface de Navegação
+Ao iniciar o programa, o usuário é recepcionado por uma tela de introdução que exibe as regras básicas do jogo, como o aviso de que o sistema trabalha exclusivamente com números inteiros (sem casas decimais). Para evitar o acúmulo imediato de informações na tela, o sistema utiliza pausas temporizadas de três segundos antes de abrir o menu principal.
+
+O menu principal funciona como o painel de controle do jogo, oferecendo duas opções iniciais:
+
+Jogar: Direciona o usuário para a seleção de dificuldade.
+
+Sair: Encerra o programa imediatamente de forma limpa.
+
+Caso o jogador escolha iniciar a partida, o sistema solicita uma nova entrada para definir a dinâmica do jogo entre o Modo Normal e o Modo Difícil.
+
+
+Mecânicas do modo normal
+	Tentativas livres: O laço de repetição foi programado para conter 9999 tentativas, ou seja, ele foi feito para ser infinito, assim o jogador terá a liberdade que quiser.
+
+	Dicas de Proximidade Espacial: Sempre que o jogador erra o palpite, o código calcula a distância matemática entre o chute e o número oculto. Se a diferença for de até 3 unidades, o programa exibe uma mensagem especial alertando que o jogador está "muito perto", especificando ainda se o palpite foi abaixo ou acima do alvo.
+	
+
+	Menu de Continuidade: A cada erro, o jogo abre uma interface perguntando se o usuário deseja continuar tentando ou se prefere desistir. Caso opte por desistir, o sistema revela o número secreto na tela antes de encerrar.
+
+
+Mecânicas do modo difícil
+O Modo Difícil remove todas as facilidades do modo anterior e introduz uma mecânica de gerenciamento de risco:
+
+	Customização de Limite: Antes de a partida começar, o próprio jogador deve digitar quantas tentativas ele deseja ter para tentar acertar. Essa escolha dita a dificuldade real do desafio.
+
+	Ausência de Dicas: O sistema apenas informa se o palpite está certo ou errado, sem dar nenhuma pista sobre a proximidade do número oculto.
+
+	Fim de Jogo por Esgotamento: O programa monitora as jogadas através de um contador de tentativas. Caso esse contador atinja o limite exato estipulado pelo jogador no início, o jogo é interrompido abruptamente com uma mensagem de fim de jogo.
+
+
+Sistema de Vitória e Progressão Dinâmica
+
+Quando o jogador insere o palpite correto, o programa dispara uma rotina de sucesso que redefine as variáveis do jogo para permitir a continuidade da diversão. O sistema exibe o número de erros cometidos especificamente naquela rodada e soma uma vitória ao perfil do jogador. Em seguida, o número escondido sofre uma alteração matemática automática (somando 6 unidades ao seu valor atual), garantindo que a próxima rodada não seja idêntica à anterior caso o usuário escolha continuar jogando no menu de vitória.
+
+Painel de Estatísticas e Relatório Final
+A aplicação mantém um controle rigoroso de dados na memória através de variáveis contadoras distintas. A cada jogada, o sistema exibe um painel em tempo real contendo:
+
+O número de erros cometidos na rodada atual.
+
+O acumulado de erros cometidos em todas as rodadas desde que o programa foi aberto.
+
+O número total de vitórias conquistadas.
+
+>>>>>>> eb232d88fa44320fe2c655255013492ccf9a1f99
 Quando o usuário decide encerrar o jogo por definitivo (seja após uma vitória, por desistência ou por estourar o limite de tentativas), o programa sai dos laços de repetição e exibe um relatório estatístico consolidado na tela, mostrando o desempenho final do jogador antes de fechar o terminal.
